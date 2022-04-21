@@ -1,3 +1,3 @@
-ES6 - let & const, arrow function, template literals, default parameter, object literals,
-rest and spread operation and destructuring assignment.
-JS - filter, map, reduce
+### Resources:
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#description
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from
