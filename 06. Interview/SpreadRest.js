@@ -8,11 +8,11 @@ var students = {
 
 //Rest: At the time of combining use Rest
 const { age, ...rest } = students;
-console.log(rest);
+console.log(rest); //{ name: 'Sukanta', hobbies: [ 'Guitar', 'Coding' ] }
 
 //Spread with Object
 var newStudent = {
   ...students,
   age: "26", //Value is overridden
 };
-console.log(newStudent);
+console.log(newStudent); //{ name: 'Sukanta', age: '26', hobbies: [ 'Guitar', 'Coding' ] }

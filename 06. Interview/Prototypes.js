@@ -19,13 +19,13 @@ const objRoll = {
   __proto__: objName,
 };
 
-console.log(objRoll);
-console.log(objRoll.getName());
+console.log(objRoll); //{ roll: 1 }
+console.log(objRoll.getName()); //Sukanta
 
 /* Here objRoll is accessing objName objects
 getRoll function which contains roll var which is 
 part of objRoll object*/
-console.log(objRoll.getRoll());
+console.log(objRoll.getRoll()); //1
 
 //Inheritance
 const obj = {
@@ -33,7 +33,7 @@ const obj = {
   __proto__: objRoll,
 };
 
-console.log(obj.getName());
+console.log(obj.getName()); //Sukanta
 
 //Array Prototype
 const array = new Array();
@@ -43,7 +43,7 @@ Array.prototype.show = function () {
   return this;
 };
 const roles = ["SDE1", "SDE2", "PM", "Associate"];
-console.log(roles.show());
+console.log(roles.show()); //[ 'SDE1', 'SDE2', 'PM', 'Associate' ]
 
 Array.prototype.converToObject = function () {
   let newObj = {};
@@ -53,7 +53,7 @@ Array.prototype.converToObject = function () {
   return newObj;
 };
 
-console.log(roles.converToObject());
+console.log(roles.converToObject()); //{ SDE1: 'SDE1', SDE2: 'SDE2', PM: 'PM', Associate: 'Associate' }
 
 //Prototype through constructor
 function myPrototype(name) {
@@ -63,5 +63,5 @@ function myPrototype(name) {
 myPrototype.prototype = objName;
 
 const myProto = new myPrototype("Ghosh");
-console.log(myProto);
-console.log(myProto.getName());
+console.log(myProto); //{ name: 'Ghosh' }
+console.log(myProto.getName()); //Ghosh

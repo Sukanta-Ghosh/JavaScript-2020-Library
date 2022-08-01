@@ -58,6 +58,14 @@ console.log("After Slice(1): ", users.slice(1));
 
 //Note: splice(): method changes the contents of an array by removing or replacing existing elements and/or adding new elements
 //Doc: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
-users.splice(1, 3, "HI", "BYE");
-console.log("After Splicing: ", users);
-//O/p: [ 'Ted', 'HI', 'BYE', 'Sor', 'Sod' ]
+//Syntax: splice(start, deleteCount, item1, item2, itemN)
+console.log("After Splicing: ");
+
+let arr = [1, 2, 3, 4, 5];
+arr.splice(2); //[ 1, 2 ]
+
+arr = [1, 2, 3, 4, 5];
+arr.splice(2, 2); //[ 1, 2, 5 ]
+
+arr = [1, 2, 3, 4, 5];
+arr.splice(1, 0, 6); //[ 1, 6, 2, 3, 4, 5 ]

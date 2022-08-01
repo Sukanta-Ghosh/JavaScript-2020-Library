@@ -2,7 +2,7 @@ console.log("1" - -"1"); //2
 console.log(0 == "0"); //true
 console.log(0 == []); //true
 console.log("0" == []); //false
-var LCO =parseInt("123xyz"); //123
+var LCO = parseInt("123xyz"); //123
 
 var returnedValue = Math.max(2, 5, 7, 4, 2, 8);
 console.log(returnedValue);
@@ -26,17 +26,19 @@ if property or key remove from an object it values are also removed.
 Delete operator work on array & object which are non-primitive types. 
 But ‘name’ here is a primitive type. So no effect on the value, and it gets returned.
 */
-let value = (function(name) { 
-        delete name; 
-        return name; 
-    })("LearnCodeOnline.in");
- console.log(value);    //LearnCodeOnline.in
+let value = (function (name) {
+  delete name;
+  return name;
+})("LearnCodeOnline.in");
+console.log(value); //LearnCodeOnline.in
 
 //+ + “a” Evaluates to NaN
-const goBananas = () => "b" + "a" + +"a" + "a"; goBananas(); //baNaNa 
+const goBananas = () => "b" + "a" + +"a" + "a";
+goBananas(); //baNaNa
 
 //NaN is equal to itself also, hence indexOf() search will fail and return -1.
- const nums = [20, "10", NaN, 3]; console.log(nums.indexOf(NaN)); //-1
+const nums = [20, "10", NaN, 3];
+console.log(nums.indexOf(NaN)); //-1
 
 /*Ex: The target object is returned and assigned to 'newObj'. 
 So, 'one' object is only the one which pass their reference to newObj object. 
@@ -50,10 +52,10 @@ let newObj = Object.assign(one, two);
 newObj["first"] = "Node";
 newObj["last"] = "React";
 console.log(one["first"]); //Node
-console.log(one["last"]);  //React
+console.log(one["last"]); //React
 
-/*Ex: The addition of multiple arrays happen using + operator then it converts array 
-to string. So, in first we are adding two array as [] + [] = ‘’ 
+/*Ex: The addition of multiple arrays using + operator converts array 
+to string. First we are adding two array as [] + [] = ‘’ 
 Which gives us an empty string as nothing is inside the array which then coverts 
 to string. Now, in ‘str’ variable first we use split method which covert a string 
 to array by breaking into multiple element based on separator passed to it. 
@@ -63,7 +65,7 @@ gets added with remaining statement. ‘’ + ‘’ + ‘L,C,O’ => ‘L,C,O�
 let arr = [];
 let str = "LCO";
 let result = arr + arr + str.split("");
-console.log(result);  //‘L,C,O’
+console.log(result); //‘L,C,O’
 
 /*Ex: Arrow functions are not suited to be used as methods because these 
 function do not have their own ‘this’. Hence in this example, the ‘this’ inside 
@@ -78,8 +80,8 @@ var obj = {
     console.log(this.title);
   },
 };
-obj.testOne();    //Learn Code Online
-obj.testTwo();    //I write code
+obj.testOne(); //Learn Code Online
+obj.testTwo(); //I write code
 
 /* Ex: The variables declared with ‘let’ have block level {} scope, 
 hence in testOne, it will print 100. In testTwo, the variable ‘a’ is already 
@@ -89,17 +91,17 @@ function testOne() {
   {
     let a = 200;
   }
-  console.log(a); 
+  console.log(a);
 }
 function testTwo() {
   {
     var a = 100;
     let a = 200;
   }
-  console.log(a); 
+  console.log(a);
 }
-testOne();  //100
-testTwo();  //Uncaught SyntaxError
+testOne(); //100
+testTwo(); //Uncaught SyntaxError
 
 //Doubt:
 /* Ex: The ‘this’ inside a function always refers to the object that is the 
@@ -120,32 +122,39 @@ obj.showName();
 
 /* Ex: The variables are initially of string data type. The syntax console.log(+a); 
 will convert them into number. Hence the result is 20 + 20 = 40.*/
-let a = "20"; let b = "20"; console.log(+a + +b); //40
+let a1 = "20";
+let b1 = "20";
+console.log(+a1 + +b1); //40
 
 /* Ex: It is because of hoisting. The variables declared inside a function are hoisted to the top. 
 Hence, variable ‘a’ declared inside the test function is available in the 
 first console statement. But its value is not defined yet, hence, it is undefined.*/
-var a = 10; 
-function test() { 
-  console.log(a); 
-  var a = 20; 
-  console.log(a); 
-} 
+var a = 10;
+function test() {
+  console.log(a);
+  var a = 20;
+  console.log(a);
+}
 test(); //undefined 20
 
 /* Ex: During runtime, the ‘test’ variable is assigned an anonymous function which 
 overrides the named function test. That is why it prints 10. It will print 20, 
 if you call function test right at the top, case named functions are hoisted.*/
-var test = function() { console.log(10); } 
-function test() { console.log(20); } 
+var test = function () {
+  console.log(10);
+};
+function test() {
+  console.log(20);
+}
 test(); //10
 
 /* Ex:   The arrays are mutable objects in JavaScript. Hence, 
 we can change a part of its value. However, title[0] in itself is a string 
 and is immutable. When we try to change a part of it, like we tried with 
 title[1][0] = “C”; it will be silently ignored.*/
-var title = ["Learn", "Learn"]; 
-title[0] = "Code"; title[1][0] = "C"; 
+var title = ["Learn", "Learn"];
+title[0] = "Code";
+title[1][0] = "C";
 console.log(title); //[“Code”, “Learn”]
 
 /* Ex: The ‘name’ is declared and initialized to ‘LCO’. The function enrollMe() is 
@@ -159,9 +168,9 @@ function enrollMe() {
   if (![]) {
     var name = "Hitesh";
   }
-  console.log("I am", name);  
+  console.log("I am", name);
 }
-enrollMe();   //I am undefined
+enrollMe(); //I am undefined
 
 /* Ex: The value of diameter is a regular function, whereas the value of perimeter 
 is an arrow function. Using arrow functions, the ‘this’ keyword refers to its current 
@@ -175,7 +184,7 @@ const shape = {
   },
   perimeter: () => 2 * Math.PI * this.radius,
 };
-console.log(shape.diameter());  //20
+console.log(shape.diameter()); //20
 console.log(shape.perimeter()); //NaN
 
 /* Ex: The variable ‘b’ here is an anonymous function that is taken from object ‘a’.
@@ -183,5 +192,10 @@ Hence first it evaluates to false. Cloning an object would also bring in the pro
 values. Hence second it evaluates to true.*/
 const a = new Object().constructor;
 const b = new a.__proto__.constructor();
-console.log(a == b);  //false
-console.log(typeof a.prototype == typeof b.prototype);  //true
+console.log(a == b); //false
+console.log(typeof a.prototype == typeof b.prototype); //true
+
+/* Ex: String localeCompare() */
+var str1 = new String("This is string");
+var index = str1.localeCompare("utiful string");
+console.log("Result :" + index);

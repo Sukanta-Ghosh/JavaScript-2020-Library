@@ -27,7 +27,7 @@ let user_2 = {
 };
 
 /** Call
-The call() method calls a function with a given this value and
+The call() method calls a function with a given this value and comma seperated
 arguments provided.
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call
 */
