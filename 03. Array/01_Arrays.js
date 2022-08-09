@@ -69,3 +69,7 @@ arr.splice(2, 2); //[ 1, 2, 5 ]
 
 arr = [1, 2, 3, 4, 5];
 arr.splice(1, 0, 6); //[ 1, 6, 2, 3, 4, 5 ]
+
+arr = [1, 2, 3, 4, 5];
+let res = arr.splice(2, 2, 6);
+console.log(res); //[3, 4]

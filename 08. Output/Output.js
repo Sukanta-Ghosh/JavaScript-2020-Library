@@ -198,4 +198,4 @@ console.log(typeof a.prototype == typeof b.prototype); //true
 /* Ex: String localeCompare() */
 var str1 = new String("This is string");
 var index = str1.localeCompare("utiful string");
-console.log("Result :" + index);
+console.log("Result :" + index); //1

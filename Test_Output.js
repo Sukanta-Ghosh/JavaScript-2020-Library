@@ -1,5 +1,3 @@
-let greeting = (person) => {
-  let name = person ? person.name : "stranger";
-  return `Howdy, ${name}`;
-};
-console.log(greeting(null));
+var str1 = new String("This is string");
+var index = str1.localeCompare("utiful string");
+console.log("Result :" + index);
