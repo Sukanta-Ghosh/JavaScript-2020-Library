@@ -1,3 +1,5 @@
-var str1 = new String("This is string");
-var index = str1.localeCompare("utiful string");
-console.log("Result :" + index);
+async function f() {
+  return 1;
+}
+
+f().then((data) => console.log(data)); // 1
